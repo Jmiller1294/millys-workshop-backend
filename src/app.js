@@ -1,10 +1,16 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
+const cors = require('cors');
 const port = 8000;
 const api = require('./routes/api');
 
-//middleware
+//--middleware--
+
+//cors middleware
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
 
 //logs middleware
 app.use(morgan('combined'));

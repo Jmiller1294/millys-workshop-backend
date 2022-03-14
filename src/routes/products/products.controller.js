@@ -1,8 +1,18 @@
-const express = require('express');
+const products = [{
+  name: 'box',
+  price: '17.99',
+  size: 'small',
+}]
+ 
+function httpGetAllProducts(req, res) {
+  return res.status(200).json(products);
+}
 
-const productsRouter = express.Router();
+function httpAddProduct() {
 
-productsRouter.get('/', httpGetAllLaunches);
-productsRouter.post('/', httpAddLaunch);
+}
 
-module.exports = productsRouter;
+module.exports = {
+  httpGetAllProducts,
+  httpAddProduct
+}
