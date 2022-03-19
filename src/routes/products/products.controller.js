@@ -1,11 +1,7 @@
-const products = [{
-  name: 'box',
-  price: '17.99',
-  size: 'small',
-}]
- 
+const { getAllProducts } = require('../../models/products/products.model');
+
 function httpGetAllProducts(req, res) {
-  return res.status(200).json(products);
+  return res.status(200).json(getAllProducts());
 }
 
 function httpAddProduct() {
