@@ -1,16 +1,7 @@
-const holidayBoxes = [ 
-  {
-    name: 'Valentines Day Box',
-    price: '35.00',
-  },
-  {
-    name: 'Fathers Day Box',
-    price: '40.00'
-  }  
-]
+const { GetAllHolidayBoxes } = require('../../models/holiday_boxes/holiday_boxes.model');
 
 function httpGetAllHolidayBoxes(req, res) {
-  res.json(holidayBoxes);
+  return res.status(200).json(GetAllHolidayBoxes());
 }
 
 module.exports = {
